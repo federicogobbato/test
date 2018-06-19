@@ -1,8 +1,2 @@
 ﻿  test.cpp
-c:\users\fgobbato\documents\gitprojects\test\test\tsingleton.h(43): error C2259: 'A': cannot instantiate abstract class
-  c:\users\fgobbato\documents\gitprojects\test\test\tsingleton.h(43): note: due to following members:
-  c:\users\fgobbato\documents\gitprojects\test\test\tsingleton.h(43): note: 'void A::message(void)': is abstract
-  c:\users\fgobbato\documents\gitprojects\test\test\testclasses.h(35): note: see declaration of 'A::message'
-  c:\users\fgobbato\documents\gitprojects\test\test\tsingleton.h(39): note: while compiling class template member function 'A &TSingleton2<A>::getInstance(void) noexcept(false)'
-  c:\users\fgobbato\documents\gitprojects\test\test\test.cpp(19): note: see reference to function template instantiation 'A &TSingleton2<A>::getInstance(void) noexcept(false)' being compiled
-  c:\users\fgobbato\documents\gitprojects\test\test\testclasses.h(32): note: see reference to class template instantiation 'TSingleton2<A>' being compiled
+  test.vcxproj -> C:\Users\fgobbato\Documents\GitProjects\test\Debug\test.exe

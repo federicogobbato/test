@@ -69,3 +69,29 @@ public:
 	}
 };
 template<class T> T* TSingleton3<T>::m_Instance = nullptr;
+
+
+
+template <class T>
+class TSingleton4
+{
+protected:
+	TSingleton4(const TSingleton4&) = delete;
+	TSingleton4& operator=(const TSingleton4&) = delete;
+
+	static T* m_Instance;
+
+	TSingleton4()
+	{
+		assert(m_Instance == nullptr);
+		m_Instance = static_cast<T*>(this);
+	}
+
+public:
+
+	static T* getInstance() {
+		assert(m_Instance == nullptr);
+		return m_Instance;
+	}
+};
+template<class T> T* TSingleton4<T>::m_Instance = nullptr;
