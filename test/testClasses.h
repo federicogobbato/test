@@ -2,71 +2,50 @@
 
 #include "TSingleton.h"
 
-//class A 
-//{
-//public:
-//	virtual void message() = 0;
-//};
-//
-//class B : public A , public TSingleton<B> {
-//public:
-//	B();
-//	virtual void message() {}
-//};
-//
-//class C : public A , public TSingleton<C> {
-//public:
-//	C();
-//	virtual void message() {}
-//};
-
-
-
+// Singleton 1-2
 //class A
 //{
 //protected:
-//	A();
+//	A() {};
 //public:
 //	virtual void message() = 0;
 //};
 //
-//class B : public A , public TSingleton<B> {
-//	friend class TSingleton<B>;
+//class B : public A , public TSingleton2<B> {
+//	friend class TSingleton2<B>;
 //protected:
-//	B();
+//	B() {};
 //public:
 //	virtual void message() {}
 //};
 //
-//class C : public A, public TSingleton<C> {
-//	friend class TSingleton<C>;
+//class C : public A, public TSingleton2<C> {
+//	friend class TSingleton2<C>;
 //protected:
-//	C();
+//	C() {};
 //public:
 //	virtual void message() {}
 //};
 
 
-class A
-{
-protected:
-	A() {};
+
+class A : public TSingleton3<A>{
 public:
+	A() {};
 	virtual void message() = 0;
 };
 
-class B : public TSingleton<B> {
-	friend class TSingleton<B>;
-protected:
-	B() {};
+class B : public A {
 public:
+	B() {};
 	virtual void message() {}
 };
 
-class C : public TSingleton<C> {
-	friend class TSingleton<C>;
-protected:
-	C() {};
+class C : public A {
 public:
+	C() {};
 	virtual void message() {}
 };
+
+
+
